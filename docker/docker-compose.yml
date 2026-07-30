@@ -18,7 +18,7 @@ services:
       - STORAGE_SIZE=1024
       - STORAGE_TYPE=2
       - VERSION=v3
-      - LOG_BATCH_SIZE=50
+      - LOG_BATCH_SIZE=10
     deploy:
       resources:
         limits:
@@ -48,7 +48,7 @@ services:
       - STORAGE_SIZE=1024
       - STORAGE_TYPE=2
       - VERSION=v3
-      - LOG_BATCH_SIZE=50
+      - LOG_BATCH_SIZE=10
     deploy:
       resources:
         limits:
@@ -78,7 +78,7 @@ services:
       - STORAGE_SIZE=1024
       - STORAGE_TYPE=2
       - VERSION=v3
-      - LOG_BATCH_SIZE=50
+      - LOG_BATCH_SIZE=10
     deploy:
       resources:
         limits:
