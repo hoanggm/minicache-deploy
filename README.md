@@ -8,13 +8,151 @@ cd docker/
 docker compose -p minicache-service up -d
 ```
 
+* Commands
+
+```bash 
+PING
+```
+
+```bash 
+KEYS
+```
+
+```bash 
+CLEAR
+```
+
+```bash 
+EXIT
+```
+
+---
+
+```bash 
+GET <key>
+```
+
+```bash 
+EXISTS <key>
+```
+
+```bash 
+SET <key> <value> <not_exists: 0|1> <time_to_live>
+```
+
+```bash 
+DEL <key>
+```
+
+---
+
+```bash 
+BF.INIT <key> <expected_keys_count> <false_positive_rate>
+```
+
+```bash 
+BF.ADD <key> <value>
+```
+
+```bash 
+BF.EXISTS <key> <value>
+```
+
+```bash 
+BF.RM <key>
+```
+
+```bash 
+BF.RS <key>
+```
+
+---
+
+```bash 
+Z.ADD <key> <score> <member> <value>
+```
+
+```bash 
+Z.SCR <key> <member>
+```
+
+```bash 
+Z.RANK <key> <member>
+```
+
+```bash 
+Z.RANGE <key> <start> <stop>
+```
+
+```bash 
+Z.RSCR <key> <minScore> <maxScore>
+```
+
+```bash 
+Z.POS <key> <position>
+```
+
+```bash 
+Z.INCR <key> <member> <increment>
+```
+
+```bash 
+Z.TOP <key> <top>
+```
+
+```bash 
+Z.RM <key> <member>
+```
+
+```bash 
+Z.DEL <key>
+```
+
+---
+
+```bash 
+GEO.ADD <key> <member> <lat> <lon>
+```
+
+```bash 
+GEO.SEARCH <key> <lat> <lon> <radius_meters> <limit>
+```
+
+```bash 
+GEO.DIST <key> <member1> <member2>
+```
+
+```bash 
+GEO.DEL <key>
+```
+
+```bash 
+GEO.RM <key> <member>
+```
+
+```bash 
+GEO.GET <key> <member>
+```
+
+```bash 
+GEO.NB <key> <member>
+```
+
+```bash 
+GEO.EXISTS <key> <member>
+```
+
+```bash 
+GEO.ENCODE <key> <member>
+```
+
 * Spring Boot Integration
 
 ```java
 <dependency>
     <groupId>io.github.hoanggm</groupId>
     <artifactId>minicache-client</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 </dependency>
 ```
 
