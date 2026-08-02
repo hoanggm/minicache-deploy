@@ -146,13 +146,35 @@ GEO.EXISTS <key> <member>
 GEO.ENCODE <key> <member>
 ```
 
+---
+
+```bash 
+H.SET <key> <field> <value>
+```
+
+```bash 
+H.GET <key> <field>
+```
+
+```bash 
+H.ALL <key>
+```
+
+```bash 
+H.RM <key> <field>
+```
+
+```bash 
+H.DEL <key>
+```
+
 * Spring Boot Integration
 
 ```java
 <dependency>
     <groupId>io.github.hoanggm</groupId>
     <artifactId>minicache-client</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
 </dependency>
 ```
 
