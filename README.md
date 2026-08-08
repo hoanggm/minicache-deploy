@@ -231,7 +231,7 @@ public class MiniCacheConfig {
                 clientReadTimeout,
                 clientBufferSize
         );
-        return new IntegrationService(miniCacheClusterClient);
+        return new IntegrationService(miniCacheClusterClient, new SingleFlightCollapsingHandler());
     }
 }
 ```
