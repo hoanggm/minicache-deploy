@@ -1,4 +1,4 @@
-* Deploy
+1. Deploy
 
 ```bash 
 cd docker/
@@ -8,7 +8,7 @@ cd docker/
 docker compose -p minicache-service up -d
 ```
 
-* Commands
+2. Commands
 
 ```bash 
 PING
@@ -168,7 +168,7 @@ H.RM <key> <field>
 H.DEL <key>
 ```
 
-* Spring Boot Integration
+3. Spring Boot Integration
 
 ```java
 <dependency>
