@@ -168,6 +168,48 @@ H.RM <key> <field>
 H.DEL <key>
 ```
 
+---
+
+```bash 
+FZ.ADD <key> "<word>" <frequency>
+```
+
+```bash 
+FZ.SEARCH <key> "<query>" <top>
+```
+
+```bash 
+FZ.SUGGEST <key> "<query>" <top> <maxEditDist>
+```
+
+```bash 
+FZ.DEL <key>
+```
+
+```bash 
+FZ.RM <key> "<word>"
+```
+
+```bash 
+FZ.EXACT <key> "<word>"
+```
+
+```bash 
+FZ.EXISTS <key> "<word>"
+```
+
+```bash 
+FZ.INCR <key> "<word>" <increment>
+```
+
+```bash 
+FZ.PHONETIC <key> "<input>" <limit>
+```
+
+```bash 
+FZ.RANDOM <key> <count>
+```
+
 3. Spring Boot Integration
 
 ```java
