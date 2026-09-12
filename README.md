@@ -266,14 +266,14 @@ public class MiniCacheConfig {
     @Bean
     public IntegrationService miniCacheService() {
         MiniCacheCluster miniCacheClusterClient = new MiniCacheCluster(
-                cluster,
-                corePoolSize,
-                maxPoolSize,
-                isStrictMode,
-                queuingTime,
-                clientConnectTimeout,
-                clientReadTimeout,
-                clientBufferSize
+                this.cluster,
+                this.corePoolSize,
+                this.maxPoolSize,
+                this.isStrictMode,
+                this.queuingTime,
+                this.clientConnectTimeout,
+                this.clientReadTimeout,
+                this.clientBufferSize
         );
         return new IntegrationService(miniCacheClusterClient, new SingleFlightCollapsingHandler());
     }
