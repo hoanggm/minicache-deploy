@@ -218,7 +218,7 @@ FZ.RANDOM <key> <count>
 <dependency>
     <groupId>io.github.hoanggm</groupId>
     <artifactId>minicache-client</artifactId>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
 </dependency>
 ```
 
