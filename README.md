@@ -218,7 +218,7 @@ FZ.RANDOM <key> <count>
 <dependency>
     <groupId>io.github.hoanggm</groupId>
     <artifactId>minicache-client</artifactId>
-    <version>1.1.2</version>
+    <version>1.1.3</version>
 </dependency>
 ```
 
@@ -231,6 +231,8 @@ minicache.queuing-time=3000
 minicache.client.connect-timeout=1000
 minicache.client.read-timeout=1500
 minicache.client.buffer-size=2048
+minicache.username=admin
+minicache.password=admin
 ```
 
 ```java
@@ -260,6 +262,12 @@ public class MiniCacheConfig {
     @Value("${minicache.client.buffer-size}")
     private Integer clientBufferSize;
 
+    @Value("${minicache.username}")
+    private String username;
+
+    @Value("${minicache.password}")
+    private String password;
+
     public MiniCacheConfig() {
     }
 
@@ -273,7 +281,8 @@ public class MiniCacheConfig {
                 this.queuingTime,
                 this.clientConnectTimeout,
                 this.clientReadTimeout,
-                this.clientBufferSize
+                this.clientBufferSize,
+                new AuthModel(this.username, this.password)
         );
         return new IntegrationService(miniCacheClusterClient, new SingleFlightCollapsingHandler());
     }
@@ -286,7 +295,7 @@ public class MiniCacheConfig {
 <dependency>
     <groupId>io.github.hoanggm</groupId>
     <artifactId>minicache-client</artifactId>
-    <version>1.1.2</version>
+    <version>1.1.3</version>
 </dependency>
 ```
 
@@ -299,6 +308,8 @@ minicache.queuing-time=3000
 minicache.client.connect-timeout=1000
 minicache.client.read-timeout=1500
 minicache.client.buffer-size=2048
+minicache.username=admin 
+minicache.password=admin
 ```
 
 ```java
@@ -328,6 +339,12 @@ public class MiniCacheConfig {
     @ConfigProperty(name = "minicache.client.buffer-size")
     Integer clientBufferSize;
 
+    @ConfigProperty(name = "minicache.username")
+    String username;
+
+    @ConfigProperty(name = "minicache.password")
+    String password;
+
     public MiniCacheConfig() {
     }
 
@@ -342,7 +359,8 @@ public class MiniCacheConfig {
                 this.queuingTime,
                 this.clientConnectTimeout,
                 this.clientReadTimeout,
-                this.clientBufferSize
+                this.clientBufferSize,
+                new AuthModel(this.username, this.password)
         );
         return new IntegrationService(miniCacheClusterClient, new SingleFlightCollapsingHandler());
     }

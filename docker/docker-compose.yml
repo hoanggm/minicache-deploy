@@ -20,8 +20,8 @@ services:
       - VERSION=v3
       - LOG_BATCH_SIZE=5
       - LOAD_SHEDDING=1
-#      - AUTH_USER=admin
-#      - AUTH_PASSWORD=admin
+      - AUTH_USER=admin
+      - AUTH_PASSWORD=admin
     deploy:
       resources:
         limits:
@@ -53,8 +53,8 @@ services:
       - VERSION=v3
       - LOG_BATCH_SIZE=5
       - LOAD_SHEDDING=1
-#      - AUTH_USER=admin
-#      - AUTH_PASSWORD=admin
+      - AUTH_USER=admin
+      - AUTH_PASSWORD=admin
     deploy:
       resources:
         limits:
@@ -86,8 +86,8 @@ services:
       - VERSION=v3
       - LOG_BATCH_SIZE=5
       - LOAD_SHEDDING=1
-#      - AUTH_USER=admin
-#      - AUTH_PASSWORD=admin
+      - AUTH_USER=admin
+      - AUTH_PASSWORD=admin
     deploy:
       resources:
         limits:
