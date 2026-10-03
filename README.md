@@ -218,7 +218,7 @@ FZ.RANDOM <key> <count>
 <dependency>
     <groupId>io.github.hoanggm</groupId>
     <artifactId>minicache-client</artifactId>
-    <version>1.1.4</version>
+    <version>1.1.5</version>
 </dependency>
 ```
 
@@ -271,7 +271,7 @@ public class MiniCacheConfig {
     public MiniCacheConfig() {
     }
 
-    @Bean
+    @Bean(destroyMethod = "close")
     public IntegrationService miniCacheService() {
         MiniCacheCluster miniCacheClusterClient = new MiniCacheCluster(
                 this.cluster,
@@ -295,7 +295,7 @@ public class MiniCacheConfig {
 <dependency>
     <groupId>io.github.hoanggm</groupId>
     <artifactId>minicache-client</artifactId>
-    <version>1.1.4</version>
+    <version>1.1.5</version>
 </dependency>
 ```
 
