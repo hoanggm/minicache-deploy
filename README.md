@@ -365,9 +365,9 @@ public class MiniCacheConfig {
         return new IntegrationService(miniCacheClusterClient, new SingleFlightCollapsingHandler());
     }
 
-    public void closeMiniCacheService(@Disposes IntegrationService integrationService) throws Exception {
-        if (integrationService != null) {
-            integrationService.close();
+    public void closeMiniCacheService(@Disposes IntegrationService miniCacheService) throws Exception {
+        if (miniCacheService != null) {
+            miniCacheService.close();
         }
     }
 }
