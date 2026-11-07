@@ -19,6 +19,7 @@ services:
       - STORAGE_TYPE=2
       - VERSION=v3
       - LOG_BATCH_SIZE=1
+      - LOG_MAX_SIZE=1000
       - LOAD_SHEDDING=1
       - AUTH_USER=admin
       - AUTH_PASSWORD=admin
@@ -52,6 +53,7 @@ services:
       - STORAGE_TYPE=2
       - VERSION=v3
       - LOG_BATCH_SIZE=1
+      - LOG_MAX_SIZE=1000
       - LOAD_SHEDDING=1
       - AUTH_USER=admin
       - AUTH_PASSWORD=admin
@@ -85,6 +87,7 @@ services:
       - STORAGE_TYPE=2
       - VERSION=v3
       - LOG_BATCH_SIZE=1
+      - LOG_MAX_SIZE=1000
       - LOAD_SHEDDING=1
       - AUTH_USER=admin
       - AUTH_PASSWORD=admin
